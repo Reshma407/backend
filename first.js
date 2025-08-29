@@ -1,36 +1,45 @@
-//example
-//destructuring
+// modules
+// common js modules
+// uses modules.exports and require()
+// example
+// destructuring
+// import { mul } from "./mul.js";
 
+// let object1 = {
+//   name: "Ram",
+//   age: 12,
+// };
+// const math = require("./sum");
 
-let object1={
-    name:"Reshma",
-    age:12,
-}
+// const { name, age } = object1;
 
+// console.log(name, age);
 
+// console.log(mul(1,2))
 
+// ES modules
+// used export and import
+// supports default & named exports
 
-const { add } =require("./sum");
-console.log(add(1,2));
+// built in modules
+// fs
 
-//ES modules
-//uses export and import
-//supports default & named exports
-//
+import fs from "fs";
+import path from "path";
+import os from "os";
 
-// mul.js
-export function mul(a, b) {
-  return a * b;
-}
+fs.writeFileSync("same.txt", "Hello this is sample text");
 
-// sum.js
-export function add(a, b) {
-  return a + b;
-}
+const data = fs.readFileSync("same.txt", "utf-8");
+console.log(data);
 
-// main.js
-import { mul } from './mul.js';
-import { add } from './sum.js';
+console.log(os.platform());
+console.log(os.arch());
+console.log(os.totalmem());
+console.log(os.freemem());
+console.log(os.uptime());
 
-console.log(add(1, 2)); // 3
-console.log(mul(3, 4)); // 12
+const filePath = "ram/docs/letter.docs";
+console.log("base Name", path.basename(filePath));
+console.log(" Directory Name", path.dirname(filePath));
+console.log("File extension ", path.extname(filePath));

@@ -20,3 +20,6 @@ const filepath="ram/docs/letter.txt";
 console.log("base Name",path.basename(filepath));
 console.log("Directory Name",path.dirname(filepath));
 console.log("File extension",path.extname(filepath));
+
+
+
